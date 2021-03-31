@@ -6,11 +6,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: UnicFarm
-    network: rinkeby
+    network: mainnet
     source:
-      address: '0x525Efa1653445a2E4F43db63390680709CfF81b8'
+      address: '0x2Bf120458d1270d0f666Cc75a70E8379270bC6e3'
       abi: UnicFarm
-      startBlock: 8061885
+      startBlock: 12142683
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4

@@ -6,11 +6,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: UnicFarm
-    network: rinkeby
+    network: mainnet
     source:
-      address: '0xc63cbe3E3F99ffC8390E3f6B4CFFf27539ADB980'
+      address: '0x2Bf120458d1270d0f666Cc75a70E8379270bC6e3'
       abi: MasterChef
-      startBlock: 7895330
+      startBlock: 12142683
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
