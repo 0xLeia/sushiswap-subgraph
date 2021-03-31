@@ -34,7 +34,7 @@ export const SUSHI_TOKEN_ADDRESS = Address.fromString('0x719c3aBF7c2435Be34eD479
 
 
 // Will update later
-export const SUSHI_USDT_PAIR_ADDRESS = Address.fromString('0xF40eDdD5652Ca16e2C97B93112a7498DCc47d81c')
+export const SUSHI_USDT_PAIR_ADDRESS = Address.fromString('0xcbc94be30e4b26f1a8016f38badcf22bdcfa10a7')
 
 export const XSUSHI_USDC_PAIR_ADDRESS = Address.fromString('0xd597924b16cc1904d808285bc9044fd51ceeead7')
 
@@ -48,7 +48,7 @@ export const DAI_WETH_PAIR = '0x3f051df334f3b8d8aa70cc5374379f36a64f4b70'
 
 export const USDT_WETH_PAIR = '0x3bc6b9602568c1088a29a888f9661f57757e349f'
 
-export const SUSHI_USDT_PAIR = '0x8C79B8b0004236ea22CF616210c38428e8a26d3d'
+export const SUSHI_USDT_PAIR = '0xcbc94be30e4b26f1a8016f38badcf22bdcfa10a7'
 
 export const WHITELIST: string[] = [
   '0x719c3abf7c2435be34ed479b98db85342d107755', // unic
