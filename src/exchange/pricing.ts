@@ -75,17 +75,22 @@ export function findEthPerToken(token: Token): BigDecimal {
   // What could we do to improve this?
   for (let i = 0; i < WHITELIST.length; ++i) {
     // TODO: Cont. This would be a good start, by avoiding multiple calls to getPair...
-    const pairAddress = factoryContract.getPair(Address.fromString(token.id), Address.fromString(WHITELIST[i]))
-    if (pairAddress != ADDRESS_ZERO) {
-      const pair = Pair.load(pairAddress.toHex())
-      if (pair.token0 == token.id) {
-        const token1 = Token.load(pair.token1)
-        return pair.token1Price.times(token1.derivedETH as BigDecimal) // return token1 per our token * Eth per token 1
-      }
-      if (pair.token1 == token.id) {
-        const token0 = Token.load(pair.token0)
-        return pair.token0Price.times(token0.derivedETH as BigDecimal) // return token0 per our token * ETH per token 0
-      }
+      log.warning(`Getting pair for ` + token.id + ` => ` + WHITELIST[i], [])
+    const pairRes = factoryContract.try_getPair(Address.fromString(token.id), Address.fromString(WHITELIST[i]))
+    if (!pairRes.reverted){
+        const pairAddress = pairRes.value
+        log.warning('Found pair ' + pairAddress.toString(), [])
+        if (pairAddress != ADDRESS_ZERO) {
+            const pair = Pair.load(pairAddress.toHex())
+            if (pair.token0 == token.id) {
+                const token1 = Token.load(pair.token1)
+                return pair.token1Price.times(token1.derivedETH as BigDecimal) // return token1 per our token * Eth per token 1
+            }
+            if (pair.token1 == token.id) {
+                const token0 = Token.load(pair.token0)
+                return pair.token0Price.times(token0.derivedETH as BigDecimal) // return token0 per our token * ETH per token 0
+            }
+        }
     }
   }
 

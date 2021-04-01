@@ -1,6 +1,6 @@
 specVersion: 0.0.3
 description: Lockup
-repository: https://github.com/0xLeia/sushiswap-subgraph-rinkeby
+repository: https://github.com/0xLeia/sushiswap-subgraph
 schema:
   file: ./lockup.graphql
 dataSources:

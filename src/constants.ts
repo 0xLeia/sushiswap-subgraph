@@ -51,12 +51,13 @@ export const USDT_WETH_PAIR = '0x3bc6b9602568c1088a29a888f9661f57757e349f'
 export const SUSHI_USDT_PAIR = '0xcbc94be30e4b26f1a8016f38badcf22bdcfa10a7'
 
 export const WHITELIST: string[] = [
-  '0x719c3abf7c2435be34ed479b98db85342d107755', // unic
-  '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', // USDC
-  '0xdac17f958d2ee523a2206206994597c13d831ec7', // USDT
-  '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2', // WETH
-  '0x6b175474e89094c44da98b954eedeac495271d0f' // DAI
+    // '0x719c3abf7c2435be34ed479b98db85342d107755', // unic
+    // '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', // USDC
+    // '0xdac17f958d2ee523a2206206994597c13d831ec7', // USDT
+    '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2', // WETH
+    // '0x6b175474e89094c44da98b954eedeac495271d0f' // DAI
 ]
+// export const WHITELIST: string[] = []
 
 // minimum liquidity required to count towards tracked volume for pairs with small # of Lps
 export const MINIMUM_USD_THRESHOLD_NEW_PAIRS = BigDecimal.fromString('0')
