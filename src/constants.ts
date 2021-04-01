@@ -20,7 +20,7 @@ export const BIG_INT_ZERO = BigInt.fromI32(0)
 
 export const LOCKUP_POOL_NUMBER = BigInt.fromI32(29)
 
-export const FACTORY_ADDRESS = Address.fromString('0x8696BDE5Cc30545b3b049f3529abBfB2B1e0C007')
+export const FACTORY_ADDRESS = Address.fromString('0xbAcC776b231c571a7e6ab7Bc2C8a099e07153377')
 
 export const LOCKUP_BLOCK_NUMBER = BigInt.fromI32(10959148)
 
